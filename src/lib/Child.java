@@ -3,11 +3,12 @@ package lib;
 public class Child {
 
     //data Child
-	private List<String> childNames;
-	private List<String> childIdNumbers;
+	private String childNames;
+	private String childIdNumbers;
 
-    public Child (){
-        
+    public Child (String childName, String childIdNumbers){
+        this.childName = childName;
+        this.childIdNumbers = childIdNumbers;
     }
 
     public void addChild(String childName, String childIdNumber) {

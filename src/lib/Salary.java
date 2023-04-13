@@ -7,9 +7,15 @@ public class Salary extends Employee {
 	private int otherMonthlyIncome;
 	private int annualDeductible;
 
-    public Salary (){
+
+    public Salary (Employee employee, int monthlySalary, int otherMonthlyIncome, int annualDeductible){
 
         super();
+		this.monthlySalary = otherMonthlyIncome;
+		this.otherMonthlyIncome = otherMonthlyIncome;
+		this.annualDeductible - annualDeductible;
+
+
     }
 
     /**

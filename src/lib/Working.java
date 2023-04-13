@@ -10,9 +10,13 @@ public class Working extends Employee{
 	private int dayJoined;
 	private int monthWorkingInYear;
 
-    public Working (){
+    public Working (Employee employee, int yearJoined, int monthJoined, int dayJoined, int monthWorkingInYear){
           
           super();
+		  this.yearJoined = yearJoined;
+		  this.monthJoined = monthJoined;
+		  this.dayJoined = dayJoined;
+		  this.monthWorkingInYear = monthWorkingInYear;
     }
 
     public int getAnnualIncomeTax() {
