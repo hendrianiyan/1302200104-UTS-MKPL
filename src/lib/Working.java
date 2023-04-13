@@ -7,16 +7,25 @@ public class Working extends Employee{
     //data Working
 	private int yearJoined;
 	private int monthJoined;
-	private int dayJoined;
 	private int monthWorkingInYear;
+	Salary salary;
+	Spouse spouse;
 
-    public Working (Employee employee, int yearJoined, int monthJoined, int dayJoined, int monthWorkingInYear){
-          
-          super();
-		  this.yearJoined = yearJoined;
-		  this.monthJoined = monthJoined;
-		  this.dayJoined = dayJoined;
-		  this.monthWorkingInYear = monthWorkingInYear;
+    public Working (Employee employee, Salary salary, Spouse spouse, int yearJoined, int monthJoined, int dayJoined, int monthWorkingInYear) {
+        super(
+            employee.getEmployeeId(),
+            employee.getFirstName(),
+            employee.getLastName(),
+            employee.getIdNumber(),
+            employee.getAddress(),
+            employee.isForeigner(),
+            employee.getGender()
+        );
+        this.salary = salary;
+        this.spouse = spouse;
+        this.yearJoined = yearJoined;
+        this.monthJoined = monthJoined;
+        this.monthWorkingInYear = monthWorkingInYear;
     }
 
     public int getAnnualIncomeTax() {
@@ -30,6 +39,6 @@ public class Working extends Employee{
 			monthWorkingInYear = 12;
 		}
 		
-		return TaxFunction.calculateTax(monthlySalary, otherMonthlyIncome, monthWorkingInYear, annualDeductible, spouseIdNumber.equals(""), childIdNumbers.size());
+		return TaxFunction.calculateTax(salary, monthWorkingInYear, spouse.getSpouseIdNumber.equals(""), super.getSizeChild());    
 	}
 }
