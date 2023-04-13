@@ -1,2 +1,0 @@
-# 1302200104-UTS-MKPL
-1302200104-Hendrian Gunarwan
