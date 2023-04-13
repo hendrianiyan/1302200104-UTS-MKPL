@@ -6,8 +6,10 @@ public class Spouse extends Employee {
 	private String spouseName;
 	private String spouseIdNumber;
 
-    public Spouse () {
+    public Spouse (Employee employee, String spouseName, String spouseIdNumber) {
         super ();
+        this.spouseName = spouseName;
+        this.spouseIdNumber = spouseIdNumber;
     }
 
     public void setSpouse(String spouseName, String spouseIdNumber) {
